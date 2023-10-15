@@ -8,6 +8,6 @@ urlpatterns =[
     path('getallUsers', views.getUsers, name = 'getAllUsersList'),
     path('addtask', views.addTask, name = 'addTask'),
     path('viewtask/<int:userId>', views.viewTask, name="getTaskFromUserId"),
-    path('delete/<str:userId>', views.deleteTask),
+    path('delete/<str:userId>/<int:taskId>', views.deleteTask),
     path('edittask/<int:userId>', views.editTask)
 ]

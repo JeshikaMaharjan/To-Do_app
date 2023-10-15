@@ -1,21 +1,24 @@
 import { useState, useEffect } from "react";
-
+import { Route, Routes } from "react-router-dom";
+import Login from "./Login";
+import TaskInput from "./TaskInput";
+import Register from "./Register";
 function App() {
-  useEffect(() => {
-    async function fetchData() {
-      try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL}`);
-        const result = await response.json();
-        console.log(result);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    fetchData();
-    // console.log(import.meta.env.VITE_API_URL);
-  }, []);
-
-  return <></>;
+  return (
+    // <>
+    //   {/* <Login /> */}
+    //   <TaskInput />
+    //   {/* <Register /> */}
+    // </>
+    <>
+      <Routes>
+        {/* public routes */}
+        <Route path="/" element={<Login />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+      </Routes>
+    </>
+  );
 }
 
 export default App;

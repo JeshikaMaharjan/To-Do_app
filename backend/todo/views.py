@@ -56,9 +56,18 @@ def viewTask(request, userId):
         return Response({'status':'error'})
     
 @api_view(['DELETE'])
-def deleteTask(request, userId):
-    data = json.loads(request.body)
-    taskId = data['taskId']
+# def deleteTask(request, userId):
+#     data = json.loads(request.body)
+#     taskId = data['taskId']
+#     try:
+#         tasks = Tasks.objects.filter(userId= userId, id = taskId)
+#         print(tasks)
+#         tasks.delete()
+#         return Response({'status':'ok', "message":"Task deleted"})
+#     except:
+#         return Response({"status":"error"})
+def deleteTask(request, userId,taskId):
+    
     try:
         tasks = Tasks.objects.filter(userId= userId, id = taskId)
         print(tasks)

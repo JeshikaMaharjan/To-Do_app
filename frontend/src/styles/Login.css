@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  background: rgb(63, 94, 251);
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(204, 34, 69, 1) 100%
+  );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  min-height: 100vh;
+}
+.container > * {
+  padding: 20px;
+  /* margin: 10px; */
+  /* flex: 1; */
+}
+
+.login-form {
+  display: flex;
+  background-color: #630b45;
+  width: 50%;
+  border-radius: 5rem;
+  overflow: hidden;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.logo {
+  flex: 1;
+  /* background-color: red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+}
+
+.img {
+  width: 70%;
+  border-radius: 20px;
+}
+.form {
+  flex: 1;
+  /* background-color: rgb(181, 189, 231); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-wrap: wrap;
+  margin: 10px;
+}
+.passwordbx {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  justify-content: center;
+}
+span,
+p,
+h1,
+.button {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: rgba(245, 245, 245, 0.692);
+}
+span {
+  font-size: 20px;
+}
+p {
+  font-size: 15px;
+}
+
+input {
+  padding: 10px;
+  border-radius: 15px;
+  border: solid rgba(245, 245, 245, 0.692);
+  background-color: #630b45;
+  color: aliceblue;
+}
+
+input::placeholder {
+  color: rgba(204, 195, 195, 0.904);
+  padding-left: 10px;
+  opacity: 0.5;
+}
+
+input:focus {
+  padding: 12px;
+  border-radius: 1rem;
+}
+
+.button:hover {
+  background-color: rgba(11, 139, 214, 0.925);
+  /* color: #630b45; */
+  font-size: 15px;
+  font-weight: bold;
+}
+
+@media (max-width: 960px) {
+  .login-form {
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    width: 400px;
+    gap: none;
+  }
+  .logo {
+    flex: 1;
+  }
+  .form {
+    flex: 2;
+    height: 100%;
+    justify-content: flex-start;
+  }
+  .img {
+    width: 80%;
+  }
+  h1 {
+    /* font-size: 40px; */
+    text-align: center;
+  }
+
+  input {
+    width: 80%;
+  }
+}
