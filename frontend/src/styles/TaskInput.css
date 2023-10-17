@@ -41,7 +41,6 @@
 }
 
 .ToDo form {
-  /* background-color: aqua; */
   display: flex;
   flex-direction: column;
   height: 50%;
