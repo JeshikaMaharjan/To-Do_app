@@ -5,11 +5,6 @@ import TaskInput from "./TaskInput";
 import Register from "./Register";
 function App() {
   return (
-    // <>
-    //   {/* <Login /> */}
-    //   <TaskInput />
-    //   {/* <Register /> */}
-    // </>
     <>
       <Routes>
         {/* public routes */}
