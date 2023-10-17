@@ -20,7 +20,6 @@ export default function TaskInput() {
 
     getAllTasks();
   }, []);
-  // console.log(tasks);
 
   const [task, setTask] = useState();
   const [priority, setPriority] = useState("1");
