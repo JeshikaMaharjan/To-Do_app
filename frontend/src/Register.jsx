@@ -88,7 +88,6 @@ export default function Register() {
                 onChange={handlePassword}
               />
             </div>
-
             <input
               type="submit"
               className="button"
