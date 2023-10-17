@@ -3,7 +3,9 @@ import React from "react";
 import logo from "./assets/logo.png";
 import axios from "axios";
 import "./styles/Login.css";
+import { useNavigate } from "react-router-dom";
 export default function Register() {
+  const navigate = useNavigate();
   const baseURL = `${import.meta.env.VITE_API_URL}`;
   const [firstName, setfirstname] = useState();
   const [lastName, setlastname] = useState();
@@ -33,8 +35,10 @@ export default function Register() {
     try {
       console.log(postdata);
       const result = await axios.post(`${baseURL}/users`, postdata);
-      if (result?.data?.status == "ok") console.log(result.data.message);
-      else console.log(result.data.message);
+      if (result?.data?.status == "ok") {
+        console.log(result.data.message);
+        navigate("/login");
+      } else console.log(result.data.message);
     } catch (err) {
       console.log(err);
     }
@@ -89,7 +93,9 @@ export default function Register() {
               type="submit"
               className="button"
               value="Register"
-              onClick={handleSubmit}
+              onClick={() => {
+                handleSubmit();
+              }}
             />
           </div>
         </div>

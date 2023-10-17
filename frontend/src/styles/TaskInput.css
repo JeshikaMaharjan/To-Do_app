@@ -4,22 +4,82 @@
   margin: 0;
 }
 
-.container {
-  background: rgb(98, 105, 139);
-  background: radial-gradient(
-    circle,
-    rgba(63, 94, 251, 1) 0%,
-    rgba(204, 34, 69, 1) 100%
-  );
+.TaskContainer {
+  background: rgb(221, 99, 88);
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100%;
   min-height: 100vh;
+  gap: 5px;
 }
 .container > * {
   padding: 20px;
   /* margin: 10px; */
   /* flex: 1; */
+}
+.TaskInnerContainer {
+  display: flex;
+  /* justify-content: start; */
+  align-items: center;
+  flex-direction: column;
+  width: 50%;
+  height: minmax(500px, auto);
+  background-color: rgb(48, 47, 56);
+  margin: 10px;
+  padding: 10px;
+  border-radius: 2rem;
+  flex-wrap: wrap;
+  overflow: scroll;
+}
+.ToDo input {
+  background-color: rgba(237, 237, 223, 0.719);
+  border-radius: 20px;
+  color: black;
+}
+
+.ToDo form {
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  height: 50%;
+  gap: 5px;
+  /* justify-content: center; */
+  padding: 1rem;
+}
+.LogoutBtn {
+  justify-self: flex-end;
+  color: black;
+}
+.select {
+  background-color: rgba(237, 237, 223, 0.719);
+  color: black;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.viewTasks {
+  display: grid;
+  grid-template-rows: repeat(2, minmax(1fr, 50%));
+  grid-template-columns: repeat(3, 3fr);
+  justify-items: center;
+  align-items: center;
+  height: 50%;
+  /* overflow: scroll; */
+}
+
+.viewTasks span {
+  font-size: 1.5em;
+}
+.viewTasks p {
+  font-size: 1em;
+}
+.viewTasks input {
+  margin: 20px;
+}
+
+.span2 {
+  grid-column-start: 2;
 }

@@ -28,12 +28,13 @@
   display: flex;
   background-color: #630b45;
   width: 50%;
+  height: 500px;
   border-radius: 5rem;
   overflow: hidden;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 5px;
 }
 
 .logo {
@@ -43,6 +44,7 @@
   align-items: center;
   justify-content: center;
   width: 80%;
+  min-width: 10rem;
 }
 
 .img {
@@ -52,6 +54,7 @@
 .form {
   flex: 1;
   /* background-color: rgb(181, 189, 231); */
+  min-width: 10rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,6 +107,11 @@ input:focus {
   /* color: #630b45; */
   font-size: 15px;
   font-weight: bold;
+}
+
+.signUp:hover {
+  font-size: 20px;
+  color: rgb(241, 245, 248);
 }
 
 @media (max-width: 960px) {

@@ -25,8 +25,11 @@ export default function Login() {
     try {
       console.log(postdata);
       const result = await axios.post(`${baseURL}/login`, postdata);
-      if (result?.data?.status == "ok") console.log("Logged in successfully.");
-      else console.log(result.data.message);
+      if (result?.data?.status == "ok") {
+        console.log("Logged in successfully.");
+        console.log(result.data.data.id);
+        navigate("/todo", { state: { userId: result.data.data.id } });
+      } else console.log(result.data.message);
     } catch (err) {
       console.log(err);
     }
@@ -70,7 +73,9 @@ export default function Login() {
               onClick={handleSubmit}
             />
 
-            <p onClick={() => navigate("/register")}>Sign up</p>
+            <p className="signUp" onClick={() => navigate("/register")}>
+              Sign up
+            </p>
           </div>
         </div>
       </div>
