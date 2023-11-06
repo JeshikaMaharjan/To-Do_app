@@ -1,0 +1,52 @@
+# Ignore Python related files and directories
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+db.sqlite3
+
+
+# Ignore logs and other temporary files
+*.log
+*.swp
+*.swo
+*.swn
+
+# Ignore user uploads and media files (if applicable)
+media/
+
+# Ignore environment-specific files
+*.local
+*.production
+
+# Ignore IDE and code editor specific files
+.idea/
+.vscode/
+
+# Ignore compiled Python files
+*.pyc
+
+# Ignore database and migration files
+*.db
+*.sqlite3
+*.sql
+migrations/
+
+# Ignore secret keys and sensitive data (e.g., .env files)
+.env
+*.env.local
+*.env.development
+*.env.test
+*.env.production
+
+# Ignore platform-specific files
+.DS_Store
+Thumbs.db
+
+# Ignore project-specific files and directories
+# Add any other project-specific files or directories to ignore here
+
+# Uncomment the following line if you want to keep the .gitignore file itself in the repository
+# !.gitignore
