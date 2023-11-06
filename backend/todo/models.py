@@ -2,6 +2,7 @@ from django.db import models
 
 # Create your models here.
 
+
 class Users(models.Model):
     username = models.CharField(max_length=50)
     firstname = models.CharField(max_length=50)
@@ -13,8 +14,8 @@ class Users(models.Model):
 
 
 class Tasks(models.Model):
-    task=models.CharField(max_length = 50)
-    priority= models.IntegerField()
+    task = models.CharField(max_length=50)
+    priority = models.IntegerField()
     userId = models.IntegerField()
 
     def __str__(self):
